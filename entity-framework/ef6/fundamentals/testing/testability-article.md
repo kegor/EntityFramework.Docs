@@ -91,7 +91,7 @@ In existing .NET applications a concrete repository often inherits from a generi
 ``` csharp
     public interface IRepository<T> {       
         IEnumerable<T> FindAll();
-        IEnumerable<T> FindBy(Expression<Func\<T, bool>> predicate);
+        IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate);
         T FindById(int id);
         void Add(T newEntity);
         void Remove(T entity);
